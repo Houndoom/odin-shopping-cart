@@ -1,38 +1,119 @@
-.App {
+@font-face {
+  font-family: 'Pokemon';
+  src: url('./fonts/Pokemon Solid.ttf');
+}
+
+@font-face {
+  font-family: 'Gameboy';
+  src: url('./fonts/Gameboy.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Unown';
+  src: url('./fonts/Unown.ttf');
+}
+
+:root {
+  --red: #FF0000;
+  --yellow: #FFDE00;
+  --blue: #3B4CCA;
+  --smaller-size: 0.5rem;
+  --small-size: 1rem;
+  --medium-size: 2rem;
+  --large-size: 3rem;
+}
+
+html, body, #root, .App {
+  height: 100%;
+}
+
+body {
+  background-color: var(--yellow);
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: var(--red);
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  padding: var(--small-size);
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header .shop-name {
+  font-family: 'Pokemon', sans-serif;
+  font-size: var(--large-size);
+  color: var(--yellow);
+  -webkit-text-stroke: 0.3rem var(--blue);
+  letter-spacing: var(--smaller-size);
+}
+
+.header nav {
+  font-size: var(--small-size);
+  font-family: 'Gameboy', sans-serif;
+  display: flex;
+}
+
+.header nav a {
+  margin: var(--small-size);
+}
+
+.header svg {
+  justify-self: end;
+}
+
+/* Main */
+
+h1 {
+  margin-top: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  font-family: 'Gameboy', sans-serif;
+  padding: var(--small-size);
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about {
+  max-width: 50%;
+  min-width: min-content;
+  display: grid;
+  place-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.about-heading {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.about-heading img {
+  height: var(--large-size);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about button {
+  padding: var(--small-size);
+  padding-bottom: var(--smaller-size);
+  font-size: var(--medium-size);
+  font-family: 'Gameboy', sans-serif;
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.about button:hover {
+  border-color: black;
+  background-color: lawngreen;
 }
