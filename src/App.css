@@ -18,6 +18,18 @@
   src: url('./fonts/Unown.ttf');
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 :root {
   --red: #FF0000;
   --yellow: #FFDE00;
@@ -146,4 +158,24 @@ h1 {
 
 .pokedollar {
   height: 1rem;
+}
+
+.quantity {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+
+}
+
+.quantity input {
+  width: 2ch;
+  text-align: center;
+}
+
+.quantity div {
+  height: var(--small-size);
+  width: var(--small-size);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
 }
