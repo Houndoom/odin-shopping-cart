@@ -117,3 +117,33 @@ h1 {
   border-color: black;
   background-color: lawngreen;
 }
+
+/* Shop */
+
+.shop {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  width: 100%;
+  row-gap: 20px;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px;
+  box-shadow: 5px 5px rgb(160, 160, 160);
+  padding: 0 var(--small-size);
+}
+
+.card .name {
+  text-align: center;
+}
+
+.pokedollar {
+  height: 1rem;
+}
