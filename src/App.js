@@ -20,30 +20,6 @@ function App() {
     });
   }
 
-  const addQuantity = (e) => {
-    const id = e.currentTarget.getAttribute('data-id');
-    if (cart[id] < 99) setCart(currentCart => {
-      currentCart[id] += 1;
-      return [...currentCart];
-    });
-  }
-
-  const minusQuantity = (e) => {
-    const id = e.currentTarget.getAttribute('data-id');
-    if (cart[id] > 0) setCart(currentCart => {
-      currentCart[id] -= 1;
-      return [...currentCart];
-    });
-  }
-
-  const changeQuantity = (e) => {
-    const id = e.target.getAttribute('data-id');
-    setCart(currentCart => {
-      currentCart[id] = parseInt(e.target.value) || 1;
-      return [...currentCart];
-    });
-  }
-
   return (
     <div className="App">
       <Router>

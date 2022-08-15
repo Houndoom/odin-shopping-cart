@@ -83,7 +83,7 @@ body {
 }
 
 .header a.to-cart {
-  justify-self: end;
+  justify-self: flex-end;
 }
 
 /* Main */
@@ -164,7 +164,7 @@ h1 {
   display: flex;
   font-family: 'Roboto', sans-serif;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .quantity input {
@@ -195,17 +195,36 @@ h1 {
 .price {
   white-space: nowrap;
 }
+
 /* Cart */
 
 .cart {
   min-width: min-content;
   width: 50vw;
+  display: grid;
+  gap: var(--small-size);
 }
 
 .cart-item {
   display: grid;
-  grid-template-columns: auto auto auto 2fr 1fr;
+  grid-template-columns: 100px 200px 100px 1fr 100px;
   align-items: center;
   gap: var(--small-size);
-  justify-items: end;
+}
+
+.cart-item .name {
+  justify-self: flex-start;
+}
+
+.cart-item img {
+  justify-self: center;
+}
+
+.cart .price{
+  justify-self: flex-end;
+}
+
+.total-cost {
+  display: grid;
+  grid-template-columns: 1fr 100px;
 }

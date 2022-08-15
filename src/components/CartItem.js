@@ -41,7 +41,7 @@ const CartItem = (props) => {
       </div>
       <div className="quantity">
         <div onClick={minusQuantity} data-id={props.id}>–</div>
-        <input type="text" pattern="\d*" maxLength="2" aria-label={props.name} id={`quantity${props.id}`} value={props.quantity} onChange={changeQuantity} data-id={props.id} />
+        <input type="text" pattern="\d*" maxLength="2" aria-label={props.name} value={props.quantity} onChange={changeQuantity} data-id={props.id} />
         <div onClick={addQuantity} data-id={props.id}>+</div>
       </div>
       <div className="price">
