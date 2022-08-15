@@ -2,14 +2,13 @@ import React from 'react';
 import items from './items';
 import Card from './Card';
 
-const Shop = () => {
+const Shop = (props) => {
   return (
     <div className='shop'>
       {
-        items.map((item) => {
+        items.map((item, i) => {
           const { name, price, img } = item;
-          console.log(name, price);
-          return <Card name={name} price={price} img={img} />;
+          return <Card name={name} price={price} img={img} key={name} id={i} addToCartFunc={props.addToCartFunc} />;
         })  
       }
     </div>

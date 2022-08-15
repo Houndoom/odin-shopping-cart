@@ -12,7 +12,7 @@ const Header = () => {
         <Link to="/">About</Link>
         <Link to="/shop">Shop</Link>
       </nav>
-      <Icon path={mdiCart} title="Shopping Cart" size='2rem'/>
+      <Link to="/cart" className="to-cart"><Icon path={mdiCart} title="Shopping Cart" size='2rem'/></Link>
     </div>
   )
 }

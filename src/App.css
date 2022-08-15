@@ -48,6 +48,7 @@ body {
   background-color: var(--yellow);
   margin: 0;
   padding: 0;
+  min-width: min-content;
 }
 
 .header {
@@ -81,7 +82,7 @@ body {
   margin: var(--small-size);
 }
 
-.header svg {
+.header a.to-cart {
   justify-self: end;
 }
 
@@ -95,7 +96,6 @@ h1 {
 .main {
   font-family: 'Gameboy', sans-serif;
   padding: var(--small-size);
-  height: 100%;
   display: grid;
   place-items: center;
 }
@@ -145,11 +145,11 @@ h1 {
   place-items: center;
   box-sizing: border-box;
   width: 200px;
-  height: 200px;
+  height: 250px;
   background-color: rgb(200, 200, 200);
   border-radius: 10px;
   box-shadow: 5px 5px rgb(160, 160, 160);
-  padding: 0 var(--small-size);
+  padding: var(--small-size);
 }
 
 .card .name {
@@ -164,7 +164,7 @@ h1 {
   display: flex;
   font-family: 'Roboto', sans-serif;
   align-items: center;
-
+  justify-content: end;
 }
 
 .quantity input {
@@ -178,4 +178,34 @@ h1 {
   display: grid;
   place-content: center;
   cursor: pointer;
+}
+
+.add-to-cart {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.add-to-cart:hover {
+  background-color: rgb(150, 150, 150);
+  outline: none;
+}
+
+.price {
+  white-space: nowrap;
+}
+/* Cart */
+
+.cart {
+  min-width: min-content;
+  width: 50vw;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: auto auto auto 2fr 1fr;
+  align-items: center;
+  gap: var(--small-size);
+  justify-items: end;
 }
