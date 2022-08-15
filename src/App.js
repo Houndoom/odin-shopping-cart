@@ -14,16 +14,17 @@ function App() {
   const addToCart = (e) => {
     const id = e.currentTarget.getAttribute('data-id');
     const quantity = parseInt(document.getElementById(`quantity${id}`).value);
-    setCart(current => {
-      current[id] = Math.min(99, current[id] + quantity);
-      return current;
+    setCart(currentCart => {
+      let newCart = [...currentCart];
+      newCart[id] = Math.min(99, newCart[id] + quantity);
+      return newCart;
     });
   }
 
   return (
     <div className="App">
       <Router>
-        <Header />
+        <Header num={cart.reduce((a, b) => a + b, 0)} />
         <div className="main">
           <Routes>
             <Route path="/" element={<About />} />

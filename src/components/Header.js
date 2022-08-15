@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '@mdi/react';
 import { mdiCart } from '@mdi/js';
+import CartNumber from './CartNumber';
 
-const Header = () => {
+const Header = (props) => {
 
   return (
     <div className="header">
@@ -12,7 +13,10 @@ const Header = () => {
         <Link to="/">About</Link>
         <Link to="/shop">Shop</Link>
       </nav>
-      <Link to="/cart" className="to-cart"><Icon path={mdiCart} title="Shopping Cart" size='2rem'/></Link>
+      <Link to="/cart" className="to-cart">
+        <Icon path={mdiCart} title="Shopping Cart" size='3rem'/>
+        <CartNumber num={props.num} />
+      </Link>
     </div>
   )
 }

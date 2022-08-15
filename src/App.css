@@ -34,6 +34,7 @@ input[type=number] {
   --red: #FF0000;
   --yellow: #FFDE00;
   --blue: #3B4CCA;
+  --gold: #B3A125;
   --smaller-size: 0.5rem;
   --small-size: 1rem;
   --medium-size: 2rem;
@@ -84,6 +85,24 @@ body {
 
 .header a.to-cart {
   justify-self: flex-end;
+  position: relative;
+}
+
+.header .cart-number {
+  box-sizing: border-box;
+  font-size: 0.6rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  border: 1px solid var(--gold);
+  border-radius: 0.8rem;
+  position: absolute;
+  right: -0.4rem;
+  bottom: -0.4rem;
+  display: grid;
+  place-content: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--gold);
+  color: white;
 }
 
 /* Main */

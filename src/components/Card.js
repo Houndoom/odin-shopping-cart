@@ -5,7 +5,7 @@ import { mdiCartArrowDown } from '@mdi/js';
 
 const Card = (props) => {
 
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(1);
 
   const addQuantity = () => {
     if (quantity < 99) setQuantity(i => i + 1);
