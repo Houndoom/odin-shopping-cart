@@ -21,6 +21,7 @@ const Cart = (props) => {
           }
         })
       }
+      <div className="gap"></div>
       <div className="total-cost">
         Total Cost: 
         <div className="price">

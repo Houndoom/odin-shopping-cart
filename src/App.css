@@ -33,7 +33,7 @@ input[type=number] {
 :root {
   --red: #FF0000;
   --yellow: #FFDE00;
-  --blue: #3B4CCA;
+  --blue: navy;
   --gold: #B3A125;
   --smaller-size: 0.5rem;
   --small-size: 1rem;
@@ -41,8 +41,15 @@ input[type=number] {
   --large-size: 3rem;
 }
 
-html, body, #root, .App {
+html, body, #root {
   height: 100%;
+}
+
+.App {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100%;
+  height: min-content;
 }
 
 body {
@@ -81,6 +88,13 @@ body {
 
 .header nav a {
   margin: var(--small-size);
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.header a.active {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
 }
 
 .header a.to-cart {
@@ -116,7 +130,6 @@ h1 {
   font-family: 'Gameboy', sans-serif;
   padding: var(--small-size);
   display: grid;
-  place-items: center;
 }
 
 .about {
@@ -124,6 +137,7 @@ h1 {
   min-width: min-content;
   display: grid;
   place-items: center;
+  place-self: center;
 }
 
 .about-heading {
@@ -142,6 +156,7 @@ h1 {
   border-radius: 10px;
   border-color: transparent;
   background-color: transparent;
+  font-weight: bold;
 }
 
 .about button:hover {
@@ -227,6 +242,8 @@ h1 {
   width: 50vw;
   display: grid;
   gap: var(--small-size);
+  justify-self: center;
+  height: min-content;
 }
 
 .cart-item {
@@ -259,4 +276,8 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 100px 1rem;
   gap: var(--small-size);
+}
+
+.gap {
+  border-bottom: 1px solid black;
 }
