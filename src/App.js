@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './components/Header';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './components/About';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
