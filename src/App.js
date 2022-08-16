@@ -13,7 +13,7 @@ function App() {
 
   const addToCart = (e) => {
     const id = e.currentTarget.getAttribute('data-id');
-    const quantity = parseInt(document.getElementById(`quantity${id}`).value);
+    const quantity = parseInt(document.querySelector(`input[data-id='${id}']`).value);
     setCart(currentCart => {
       let newCart = [...currentCart];
       newCart[id] = Math.min(99, newCart[id] + quantity);

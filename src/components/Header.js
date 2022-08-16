@@ -13,7 +13,7 @@ const Header = (props) => {
         <Link to="/">About</Link>
         <Link to="/shop">Shop</Link>
       </nav>
-      <Link to="/cart" className="to-cart">
+      <Link to="/cart" className="to-cart" aria-label="Shopping Cart">
         <Icon path={mdiCart} title="Shopping Cart" size='3rem'/>
         <CartNumber num={props.num} />
       </Link>

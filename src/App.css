@@ -180,10 +180,11 @@ h1 {
 }
 
 .quantity {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
   font-family: 'Roboto', sans-serif;
   align-items: center;
-  justify-content: flex-end;
+  place-content: center;
 }
 
 .quantity input {
@@ -191,12 +192,16 @@ h1 {
   text-align: center;
 }
 
-.quantity div {
+.quantity button {
   height: var(--small-size);
   width: var(--small-size);
   display: grid;
   place-content: center;
   cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 .add-to-cart {
@@ -226,7 +231,7 @@ h1 {
 
 .cart-item {
   display: grid;
-  grid-template-columns: 100px 200px 100px 1fr 100px;
+  grid-template-columns: 100px 200px 100px 1fr 100px 1rem;
   align-items: center;
   gap: var(--small-size);
 }
@@ -243,7 +248,15 @@ h1 {
   justify-self: flex-end;
 }
 
+.remove {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
 .total-cost {
   display: grid;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: 1fr 100px 1rem;
+  gap: var(--small-size);
 }
