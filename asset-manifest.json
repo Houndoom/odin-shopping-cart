@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/odin-shopping-cart/static/css/main.0c9fbece.css",
-    "main.js": "/odin-shopping-cart/static/js/main.3526c605.js",
+    "main.js": "/odin-shopping-cart/static/js/main.e3dbf7c8.js",
     "static/media/Roboto-Regular.ttf": "/odin-shopping-cart/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
     "static/media/Pokemon Solid.ttf": "/odin-shopping-cart/static/media/Pokemon Solid.5d60be1f7ff5fcc21fc1.ttf",
     "static/media/Unown.ttf": "/odin-shopping-cart/static/media/Unown.9b6e8427ea52a2f69ad4.ttf",
@@ -10,10 +10,10 @@
     "static/media/pokeball.svg": "/odin-shopping-cart/static/media/pokeball.2db7de44dd9ea6558c0113d7d9e3db9d.svg",
     "index.html": "/odin-shopping-cart/index.html",
     "main.0c9fbece.css.map": "/odin-shopping-cart/static/css/main.0c9fbece.css.map",
-    "main.3526c605.js.map": "/odin-shopping-cart/static/js/main.3526c605.js.map"
+    "main.e3dbf7c8.js.map": "/odin-shopping-cart/static/js/main.e3dbf7c8.js.map"
   },
   "entrypoints": [
     "static/css/main.0c9fbece.css",
-    "static/js/main.3526c605.js"
+    "static/js/main.e3dbf7c8.js"
   ]
 }
